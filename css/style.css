@@ -1,3 +1,17 @@
+/*
+Assuming device sizes as
+0-600px: Phone
+601-900px : tablet portrait
+901-1200 : tablet landscape
+1201-1800 : desktop, base size.
+1800+: big desktop
+
+breakpoint is one of
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -35,6 +49,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5rem) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
